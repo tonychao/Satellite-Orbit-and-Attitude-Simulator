@@ -21,7 +21,6 @@ options = odeset('RelTol',1e-12,'AbsTol',1e-12);
 %figure
 
 %[progate firing propagte2 firing2 ]
-%time_vec = [1087.5 1166.525 3607.5 3663.405 6475.0 6553.654 7828.833 7856.729 8631.5 8645.661 (8645.661+24*60)]; %time vector [min]
 time_vec = [1087.5 1166.525 2607.5 2663.405 4475.0 4500.654 5828.833 5856.729 6631.5 6645.661 (7645.661+24*60)]; %time vector [min]
 %------GTO t=0 ---------------------
 sample_qty = (time_vec(1)-0)*2;     %every minute
