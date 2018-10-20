@@ -443,14 +443,14 @@ for k = 1:np:tam % I try to avoid using i as a loop variable
 end
 %plot3(y6(:,1),y6(:,2),y6(:,3));
 
-graphic_position_thrust_vector(yf1(1,1),yf1(1,2),yf1(1,3), -22.3*pi/180, 0);
-graphic_position_thrust_vector(yf1(length(yf1),1),yf1(length(yf1),2),yf1(length(yf1),3), -22.3*pi/180, 0);
+%graphic_position_thrust_vector(yf1(1,1),yf1(1,2),yf1(1,3), -22.3*pi/180, 0);
+%graphic_position_thrust_vector(yf1(length(yf1),1),yf1(length(yf1),2),yf1(length(yf1),3), -22.3*pi/180, 0);
 
 
 
-xlabel('X');
-ylabel('Y');
-zlabel('Z');
+%xlabel('X');
+%ylabel('Y');
+%zlabel('Z');
 
 %figure 
 %hold all
@@ -475,54 +475,54 @@ zlabel('Z');
 
 
 
-  [a(1), e_mag(1), i(1), Omega(1), w(1), nu(1), w_true(1), lambda_true(1), arg_latt_u(1)] = elorb(y1(1,1:3)',y1(1,4:6)')
-  [a(2), e_mag(2), i(2), Omega(2), w(2), nu(2), w_true(2), lambda_true(2), arg_latt_u(2)] = elorb(y2(1,1:3)',y2(1,4:6)')
-  [a(3), e_mag(3), i(3), Omega(3), w(3), nu(3), w_true(3), lambda_true(3), arg_latt_u(3)] = elorb(y3(1,1:3)',y3(1,4:6)')
-  [a(4), e_mag(4), i(4), Omega(4), w(4), nu(4), w_true(4), lambda_true(4), arg_latt_u(4)] = elorb(y4(1,1:3)',y4(1,4:6)')
-  [a(5), e_mag(5), i(5), Omega(5), w(5), nu(5), w_true(5), lambda_true(5), arg_latt_u(5)] = elorb(y5(1,1:3)',y5(1,4:6)')
-  [a(6), e_mag(6), i(6), Omega(6), w(6), nu(6), w_true(6), lambda_true(6), arg_latt_u(6)] = elorb(y6(1,1:3)',y6(1,4:6)')
+  %[a(1), e_mag(1), i(1), Omega(1), w(1), nu(1), w_true(1), lambda_true(1), arg_latt_u(1)] = elorb(y1(1,1:3)',y1(1,4:6)')
+  %[a(2), e_mag(2), i(2), Omega(2), w(2), nu(2), w_true(2), lambda_true(2), arg_latt_u(2)] = elorb(y2(1,1:3)',y2(1,4:6)')
+  %[a(3), e_mag(3), i(3), Omega(3), w(3), nu(3), w_true(3), lambda_true(3), arg_latt_u(3)] = elorb(y3(1,1:3)',y3(1,4:6)')
+  %[a(4), e_mag(4), i(4), Omega(4), w(4), nu(4), w_true(4), lambda_true(4), arg_latt_u(4)] = elorb(y4(1,1:3)',y4(1,4:6)')
+  %[a(5), e_mag(5), i(5), Omega(5), w(5), nu(5), w_true(5), lambda_true(5), arg_latt_u(5)] = elorb(y5(1,1:3)',y5(1,4:6)')
+  %[a(6), e_mag(6), i(6), Omega(6), w(6), nu(6), w_true(6), lambda_true(6), arg_latt_u(6)] = elorb(y6(1,1:3)',y6(1,4:6)')
   
-  x_axis = 1:6;
-  
-  
-  figure
-  subplot(3,2,1);
-  plot(a,'-s')
-  title('semi-major axis [Km]');
-  strValues = strtrim(cellstr(num2str([a'],'%g')));
-  text(x_axis,a,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
-  
-  subplot(3,2,2);
-  plot(e_mag,'-s')
-  title('eccentricity magnitude []');
-  strValues = strtrim(cellstr(num2str([e_mag'],'%g')));
-  text(x_axis,e_mag,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
-  
-  subplot(3,2,3);
-  plot(Omega*180/pi,'-s')
-  title('RAAN [deg]');
-  strValues = strtrim(cellstr(num2str([Omega'*180/pi],'%g')));
-  text(x_axis,Omega*180/pi,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
-  
-  subplot(3,2,4);
-  plot(i*180/pi,'-s')
-  title('Inclination [deg]');
-  strValues = strtrim(cellstr(num2str([i'*180/pi],'%g')));
-  text(x_axis,i*180/pi,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
-  
-  subplot(3,2,5);
-  plot(w*180/pi,'-s')
-  title('Argument of Perigee [deg]');
-  strValues = strtrim(cellstr(num2str([w'*180/pi],'%g')));
-  text(x_axis,w*180/pi,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
-  
-  subplot(3,2,6);
-  plot(nu*180/pi,'-s')
-  title('True Anomaly [deg]');
-  strValues = strtrim(cellstr(num2str([nu'*180/pi],'%g')));
-  text(x_axis,nu*180/pi,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
+  %x_axis = 1:6;
   
   
+  %figure
+  %subplot(3,2,1);
+  %plot(a,'-s')
+  %title('semi-major axis [Km]');
+  %strValues = strtrim(cellstr(num2str([a'],'%g')));
+  %text(x_axis,a,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
+  
+  %subplot(3,2,2);
+  %plot(e_mag,'-s')
+  %title('eccentricity magnitude []');
+  %strValues = strtrim(cellstr(num2str([e_mag'],'%g')));
+  %text(x_axis,e_mag,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
+  
+  %subplot(3,2,3);
+  %plot(Omega*180/pi,'-s')
+  %title('RAAN [deg]');
+  %strValues = strtrim(cellstr(num2str([Omega'*180/pi],'%g')));
+  %text(x_axis,Omega*180/pi,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
+  
+  %subplot(3,2,4);
+%   plot(i*180/pi,'-s')
+%   title('Inclination [deg]');
+%   strValues = strtrim(cellstr(num2str([i'*180/pi],'%g')));
+%   text(x_axis,i*180/pi,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
+%   
+%   subplot(3,2,5);
+%   plot(w*180/pi,'-s')
+%   title('Argument of Perigee [deg]');
+%   strValues = strtrim(cellstr(num2str([w'*180/pi],'%g')));
+%   text(x_axis,w*180/pi,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
+%   
+%   subplot(3,2,6);
+%   plot(nu*180/pi,'-s')
+%   title('True Anomaly [deg]');
+%   strValues = strtrim(cellstr(num2str([nu'*180/pi],'%g')));
+%   text(x_axis,nu*180/pi,strValues,'VerticalAlignment','bottom','fontsize',8,'color','k');
+  
+  
 
 
 
@@ -534,18 +534,18 @@ zlabel('Z');
 
 
 
-figure;
-grid on;
-hold on;
-[earth_x,earth_y,earth_z] = sphere;
-mesh (earth_x*Re,earth_y*Re,earth_z*Re);
-graphic_position_thrust_vector(yf1(1,1),yf1(1,2),yf1(1,3), -22.3*pi/180, 0);
-graphic_position_thrust_vector(yf1(length(yf1),1),yf1(length(yf1),2),yf1(length(yf1),3), -22.3*pi/180, 0);
+%figure;
+%grid on;
+%hold on;
+%[earth_x,earth_y,earth_z] = sphere;
+%mesh (earth_x*Re,earth_y*Re,earth_z*Re);
+%graphic_position_thrust_vector(yf1(1,1),yf1(1,2),yf1(1,3), -22.3*pi/180, 0);
+%graphic_position_thrust_vector(yf1(length(yf1),1),yf1(length(yf1),2),yf1(length(yf1),3), -22.3*pi/180, 0);
 
 
 
-xlabel('X');
-ylabel('Y');
-zlabel('Z');
-title('Vector of Position and Thruster');
-legend('Earth','start 1 firing','end 1 firing');
+%xlabel('X');
+%ylabel('Y');
+%zlabel('Z');
+%title('Vector of Position and Thruster');
+%legend('Earth','start 1 firing','end 1 firing');
